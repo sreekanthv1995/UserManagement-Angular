@@ -1,6 +1,11 @@
-<div class="container mt-5">
+<div class="container-fluid mt-5">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
+            <div class="image-container">
+                <img src="https://cdn.pixabay.com/photo/2019/01/16/19/14/membership-3936563_1280.jpg" alt="image">
+            </div>
+        </div>
+        <div class="col-md-6">
             <form [formGroup]="registerForm" (ngSubmit)="register()">
                 <mat-card>
                     <mat-card-header>
@@ -9,24 +14,23 @@
                     <mat-card-content>
                         <mat-form-field>
                             <mat-label>Firstname</mat-label>
-                            <textarea matInput formControlName="firstName"></textarea>
+                            <input matInput formControlName="firstName">
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>LastName</mat-label>
-                            <textarea matInput formControlName="lastName"></textarea>
+                            <input matInput formControlName="lastName">
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Email</mat-label>
-                            <input matInput formControlName="email">
+                            <input matInput formControlName="email" type="email">
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Password</mat-label>
-                            <textarea matInput formControlName="password"></textarea>
+                            <input matInput formControlName="password" type="password">
                         </mat-form-field>
-
                     </mat-card-content>
                     <mat-card-actions>
-                        <button type="submit" mat-raised-button color="accent">Save</button>
+                        <button type="submit" mat-raised-button color="primary">Signup</button>
                     </mat-card-actions>
                 </mat-card>
             </form>

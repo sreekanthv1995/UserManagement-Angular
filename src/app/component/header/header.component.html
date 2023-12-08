@@ -1,6 +1,8 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
     <span>Welcome</span>
-    <button mat-button routerLink="">Home</button>
-    <button mat-button routerLink="login">login</button>
-    <button mat-button routerLink="signup">signup</button>
+    <button mat-button routerLink='home'>Home</button>
+    <button *ngIf="!(isAuthenticate | async)" mat-button routerLink="">login</button>
+    <button *ngIf="!(isAuthenticate | async)" mat-button routerLink="signup">signup</button>
+
+    <button *ngIf="isAuthenticate | async" mat-button>Logout</button>
 </mat-toolbar>

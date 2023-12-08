@@ -1,7 +1,13 @@
+import { User } from "../../../model/userModel";
+
 export interface LoginState {
+    user: User | null;
 
 };
 
-export const initialState:LoginState = {
+// console.log(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!) as User: null,);
 
+export const initialState:LoginState = {
+    // user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!) as User: null,
+    user: null,
 };

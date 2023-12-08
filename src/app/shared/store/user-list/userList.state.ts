@@ -1,4 +1,4 @@
-import { Users } from "./register.model";
+import { Users } from "../../../model/register.model";
 
 export const registerState: Users = {
     userList:[]

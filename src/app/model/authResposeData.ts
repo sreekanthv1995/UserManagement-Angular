@@ -4,7 +4,7 @@ export interface AuthResponseData {
 
     token: string;
     refreshToken: string;
-    user: User;
+    user: User
 
 
 
